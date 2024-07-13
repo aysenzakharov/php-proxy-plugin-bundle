@@ -15,6 +15,8 @@ class YoutubePlugin extends AbstractPlugin
     {
         //$event['request']->headers->set('Cookie', 'PREF=f6=8');
         $event['request']->headers->set('User-Agent', 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)');
+        $event['request']->headers->set('X-YouTube-Client-Name','1');
+		$event['request']->headers->set('X-YouTube-Client-Version','1.20200731.02.01');
     }
 
     public function onCompleted(ProxyEvent $event)
